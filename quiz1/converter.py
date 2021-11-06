@@ -1,3 +1,5 @@
+from typing import SupportsFloat
+
 def meters_to_feet(meters: float) -> float:
     """
     This function takes a float representing a measurement in meters
@@ -6,6 +8,10 @@ def meters_to_feet(meters: float) -> float:
     :param meters: A float representing a measurement in meters.
     :return: A float representing the input measurement converted to feet.
     """
+    feet = float(meters / .3048)
+
+    return float(round(feet,4))
+
 
 
 
@@ -17,4 +23,6 @@ def feet_to_meters(feet: float) -> float:
     :param feet: A float representing a measurement in feet.
     :return: A float representing the input measurement converted to meters.
     """
+    meters = float(feet * .3048)
 
+    return float(round(meters,4))
